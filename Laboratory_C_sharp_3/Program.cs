@@ -45,7 +45,7 @@ namespace Lab3_C_Sharp
             Person p1 = new Person("Giacomo", 2003);
             Person p2 = new Person("Ben", 1999);
             Person p3 = new Person("Milana", 1994);
-            Person p4 = new Person("Tom", 2006);
+            Person p4 = new Person("Tom", 2007);
             Person p5 = new Person("Kate", 2001);
             Person p6 = new Person("Robert", 1997);
 
@@ -63,11 +63,13 @@ namespace Lab3_C_Sharp
             p5.Output();
             p6.Output();
 
-            Console.WriteLine(p1 == p6);
-            Console.WriteLine(p4 == p6);
+            p4.ChangeName("Very young");
+            p4.Output();
 
-            p2.ChangeName("Ivan");
-            p2.Output();
+            Console.WriteLine($"Інформація про всіх осіб: {p1}; {p2}; {p3}; {p4}; {p5}; {p6}");
+
+            p1.Comparison(p1, p4);
+            p1.Comparison(p1, p6);
 
             Console.WriteLine("Натисніть будь-яку кнопку щоб закрити консоль");
             Console.ReadKey();

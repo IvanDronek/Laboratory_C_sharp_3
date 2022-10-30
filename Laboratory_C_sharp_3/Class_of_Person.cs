@@ -16,17 +16,6 @@ class Person
     public int BirthYear
     {
         get { return birthYear; }
-        set
-        {
-            if (date.Year - birthYear < 16)
-            {
-                this.name = "Very Young";
-            }
-            else
-            {
-                this.name = this.name;
-            }
-        }
     }
 
     
@@ -93,5 +82,19 @@ class Person
     public static bool operator !=(Person p1, Person p2)
     {
         return (p1.name != p2.name);
+    }
+    public void Comparison(Person p1, Person p2)
+    {
+        Console.OutputEncoding = System.Text.Encoding.Unicode;
+        Console.InputEncoding = System.Text.Encoding.Unicode;
+
+        if (p1 == p2)
+        {
+            Console.WriteLine($"Особи з однаковими іменами, їх інформація: {p1}; {p2}");
+        }
+        else
+        {
+            Console.WriteLine($"В осіб не однакові імена");
+        }
     }
 }
